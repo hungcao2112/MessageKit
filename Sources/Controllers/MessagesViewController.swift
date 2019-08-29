@@ -31,9 +31,7 @@ open class MessagesViewController: UIViewController,
 UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
 
     /// The `MessagesCollectionView` managed by the messages view controller object.
-    open var messagesCollectionView: MessagesCollectionView {
-        return MessagesCollectionView()
-    }
+    @IBOutlet open weak var messagesCollectionView: MessagesCollectionView!
     
 
     /// The `InputBarAccessoryView` used as the `inputAccessoryView` in the view controller.
@@ -82,7 +80,7 @@ UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
 
     private var isFirstLayout: Bool = true
     
-    internal var isMessagesControllerBeingDismissed: Bool = false
+    public var isMessagesControllerBeingDismissed: Bool = false
 
     internal var messageCollectionViewBottomInset: CGFloat = 0 {
         didSet {

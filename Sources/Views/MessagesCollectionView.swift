@@ -64,6 +64,9 @@ open class MessagesCollectionView: UICollectionView {
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(frame: .zero, collectionViewLayout: MessagesCollectionViewFlowLayout())
+        backgroundColor = .white
+        registerReusableViews()
+        setupGestureRecognizers()
     }
 
     public convenience init() {
